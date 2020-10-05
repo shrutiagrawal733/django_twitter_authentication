@@ -1,0 +1,8 @@
+{% block content %}Home Page{% endblock title %}
+<h1>Vouch_Assignment</h1>
+<h2> Home </h2>
+{% if user.is_authenticated %}
+<p>Welcome on Home Page, {{user.first_name}}</p>
+<a href = "{% url 'login' %}">Login</a>
+{% endif %}
+{% endblock content %}

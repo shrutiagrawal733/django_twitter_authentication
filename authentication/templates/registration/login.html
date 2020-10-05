@@ -1,0 +1,13 @@
+<h1>Vouch_Assignment</h1>
+ 
+{% block content %}
+<h2> Login </h2>
+<form method = "POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">Login</button>
+</form>
+<br>
+  <p><strong>-- OR --</strong></p>
+  <a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a><br>
+{% endblock content %}
